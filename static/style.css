@@ -1,0 +1,297 @@
+* {
+    font-family: "neodgm-code", sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 상세페이지 크기 */
+#wrap {
+    width: 750px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* 본 카테고리 */
+
+nav {
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    margin-left: 350px;
+}
+
+nav>.gnb {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 120px;
+    list-style-type: none;
+}
+
+nav>.gnb>li {
+    width: 120px;
+    border: none;
+    /* border: 1px solid #ccc; */
+}
+
+nav>.gnb>li>a {
+    display: block;
+    height: 30px;
+    /*큰하트 간격*/
+    line-height: 30px;
+    text-align: center;
+}
+
+nav>.gnb>li:hover>a {
+    opacity: 0.5;
+    background-color: transparent;
+    transform: scale(1.4);
+    transition: transform .3s;
+}
+
+/* 서브 카테고리 */
+.lnb {
+    display: none; 
+    /* position: absolute; */
+    /* lift: -1px; //상위메뉴에 설정한 border:1px 때문에 자식요소가 밀려나서// */
+    top: 50px; 
+    width: 100%; 
+    /* border: 1px solid black; */
+    list-style: none
+}
+
+nav>.gnb>.lnb {
+    /* display: none; */
+    /* position: absolute; */
+    left: -1px;
+    top: 50px;
+    width: 100;
+    border: 1px solid black;
+
+}
+
+nav>.gnb>.li:hover>.lnb {
+    display: block;
+
+}
+
+nav>.gnb>.lnb>li {
+    border-bottom: 1px solid black;
+}
+
+nav>.gnb>.lnb>li :last-chinld {
+    border-bottom-width: 0;
+}
+
+nav>.gnb>.lnb>li>a {
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+nav>.gnb>.lnb>li:hover>a {
+
+    background-color: sandybrown;
+
+}
+
+li:hover>.lnb {
+    display: block;
+}
+
+a {
+    color: sandybrown;
+    text-decoration-line: none;
+}
+
+/* 동그라미사진 */
+.jb {
+    box-sizing: border-box;
+    width: 260px;
+    height: 260px;
+    margin: 40px auto;
+
+    background-image: url('https://i.namu.wiki/i/y9f5vOHoe4KtAVYfK4ghPWTi8umyFCDyyzFOqnJmOk1tiOwQfxMMKzKto1kO-KHcB3vfCR-PbmHVWCp_hzC75Q.webp');
+    background-position: center;
+    background-size: cover;
+
+
+    border-radius: 50%;
+}
+
+/* 상세페이지 표 */
+.tablebox {
+    width: 250px;
+    height: 250px;
+    margin: 50px auto 40px auto;
+    background-color: transparent;
+}
+
+html {
+    overflow: hidden;
+
+}
+
+html,
+body {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transition: all 1s cubic-bezier(0.340, -0.600, 0.515, 1.570);
+
+}
+
+/* h6 {
+    margin: 0;
+} */
+
+.section {
+
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding-bottom: 50px;
+
+}
+
+#section1 {
+    background-color: white;
+
+}
+
+#section2 {
+    background-color: lightyellow;
+
+}
+
+#section3 {
+    background-color: lightpink;
+
+}
+
+#section4 {
+    background-color: lightblue;
+
+}
+
+#section5 {
+    background-color: aliceblue;
+}
+
+
+.section1Container {
+    width: 100%;
+    height: 400px;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fmxe7e%2Fbtsgn3uLshF%2FjCKdo8i8yPj2sIhCxZILd0%2Fimg.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.section1Input {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.section1Container h1 {
+    position: absolute;
+    top: 50px;
+}
+
+.section1Input input {
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+#commentInput:focus {
+    outline: none;
+}
+
+.section1Input button {
+    border: burlywood;
+    font-family: sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.inputComment {
+    /* border: 1px solid black; */
+    width: 60%;
+    height: 45%;
+    padding: 0 20px;
+    margin: 20px auto;
+    
+}
+
+.inputList {
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.divcomment {
+    border: 1px solid white;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+/* 팀소개페이지,글 */
+.team {
+    flex-wrap: wrap;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    position: relative;
+
+    width: 100%;
+    border-radius: 30px;
+
+    margin: 20px auto 20px auto;
+
+}
+
+.intro {
+    width: 710px;
+    height: 700px;
+}
+
+.team_text {
+    margin-top: 70px;
+}
+
+.team_textbottom {
+    margin-top: 30px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2.0px;
+    letter-spacing: 1.5px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#section5-1, #section4-1, #section3-1, #section2-1 {
+    width: 100%;
+    height: 830px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    justify-content: space-around;
+    
+}
